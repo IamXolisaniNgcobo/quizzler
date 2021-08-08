@@ -133,9 +133,8 @@ class _QuizPageState extends State<QuizPage> {
   _onBasicAlertPressed(context) {
     Alert(
             context: context,
-            title: "Warning",
-            desc:
-                "Congratulations you have successfuly answered all questions.",
+            title: "Finished",
+            desc: "You\'ve reached the end of the quiz",
             alertAnimation: fadeAlertAnimation)
         .show();
   }
