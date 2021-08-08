@@ -132,10 +132,27 @@ class _QuizPageState extends State<QuizPage> {
   //Alert
   _onBasicAlertPressed(context) {
     Alert(
-      context: context,
-      title: "Warning",
-      desc: "Congratulations you have successfuly answered all questions.",
-    ).show();
+            context: context,
+            title: "Warning",
+            desc:
+                "Congratulations you have successfuly answered all questions.",
+            alertAnimation: fadeAlertAnimation)
+        .show();
+  }
+
+  //alert animation
+  Widget fadeAlertAnimation(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+    return Align(
+      child: FadeTransition(
+        opacity: animation,
+        child: child,
+      ),
+    );
   }
 }
 
